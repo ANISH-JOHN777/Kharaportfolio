@@ -76,27 +76,11 @@ const Impact = () => {
     ];
 
     return (
-        <section id="impact" className="section-padding section-container bg-white relative overflow-hidden">
-            {/* Animated background shapes */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: 0 }}
-                whileInView={{ opacity: 0.04, scale: 1, rotate: 45 }}
-                viewport={{ once: true }}
-                transition={{ duration: 2, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute top-1/4 right-0 w-96 h-96 bg-accent rounded-full blur-3xl pointer-events-none"
-            />
-            <motion.div
-                initial={{ opacity: 0, scale: 0.5, rotate: 0 }}
-                whileInView={{ opacity: 0.04, scale: 1, rotate: -45 }}
-                viewport={{ once: true }}
-                transition={{ duration: 2, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute bottom-1/4 left-0 w-96 h-96 bg-accent-light rounded-full blur-3xl pointer-events-none"
-            />
-
+        <section id="impact" className="section-padding section-container bg-white">
             {/* Section Header */}
             <motion.div
                 {...scrollReveal}
-                className="text-center mb-16 relative z-10"
+                className="text-center mb-16"
             >
                 <motion.h2
                     initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
@@ -126,7 +110,8 @@ const Impact = () => {
             </motion.div>
 
             {/* Metrics Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"
+            >
                 {metrics.map((metric, index) => (
                     <motion.div
                         key={index}

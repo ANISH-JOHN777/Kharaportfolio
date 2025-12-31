@@ -26,20 +26,11 @@ const Education = () => {
     ];
 
     return (
-        <section id="education" className="section-padding section-container bg-neutral-50 relative overflow-hidden">
-            {/* Animated background gradient */}
-            <motion.div
-                initial={{ opacity: 0, rotate: 0 }}
-                whileInView={{ opacity: 0.03, rotate: 180 }}
-                viewport={{ once: true }}
-                transition={{ duration: 3, ease: [0.16, 1, 0.3, 1] }}
-                className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-accent to-accent-light rounded-full blur-3xl pointer-events-none"
-            />
-
+        <section id="education" className="section-padding section-container bg-neutral-50">
             {/* Section Header */}
             <motion.div
                 {...scrollReveal}
-                className="text-center mb-16 relative z-10"
+                className="text-center mb-16"
             >
                 <motion.h2
                     initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
@@ -60,7 +51,7 @@ const Education = () => {
             </motion.div>
 
             {/* Credentials Grid */}
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto relative z-10">
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 {credentials.map((cred, index) => {
                     const Icon = cred.icon;
                     return (

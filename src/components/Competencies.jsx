@@ -42,37 +42,21 @@ const Competencies = () => {
     ];
 
     return (
-        <section id="competencies" className="section-padding section-container bg-white relative overflow-hidden">
-            {/* Decorative background element */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 0.03, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1.5 }}
-                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent rounded-full blur-3xl pointer-events-none"
-            />
-
+        <section id="competencies" className="section-padding section-container bg-white">
             {/* Section Header */}
             <motion.div
                 {...scrollReveal}
-                className="text-center mb-16 relative z-10"
+                className="text-center mb-16"
             >
                 <motion.h2
                     initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                    className="heading-lg text-neutral-900 mb-4"
+                    className="heading-lg text-neutral-900 mb-16"
                 >
                     Core Competencies
                 </motion.h2>
-                <motion.div
-                    initial={{ scaleX: 0, opacity: 0 }}
-                    whileInView={{ scaleX: 1, opacity: 1 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                    className="w-20 h-1 bg-accent mx-auto origin-center"
-                />
             </motion.div>
 
             {/* Two Column Layout */}
